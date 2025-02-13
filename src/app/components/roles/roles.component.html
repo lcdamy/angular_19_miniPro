@@ -1,0 +1,11 @@
+<div>
+    <div class="row">
+        <div class="col-4">
+            <select class="form-control" id="role" name="role" ng-model="role">
+                <option *ngFor="let role of roleList" [value]="role.roleId">{{role.role}}</option>
+            </select>
+
+        </div>
+    </div>
+
+</div>

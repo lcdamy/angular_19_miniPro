@@ -1,0 +1,27 @@
+<div class="row">
+    @if (isloading==true){
+
+    <div class="d-flex justify-content-center my-3">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    } @else{
+
+        @for (item of designation; track $index){
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.designation}}</h5>
+                    <p class="card-text">Description: </p>
+                    <a href="#" class="card-link"> card link</a>
+                    <a href="#" class="card-link">another link</a>
+                </div>
+            </div>
+        </div>
+        }
+    }
+
+
+
+</div>
