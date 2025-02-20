@@ -13,12 +13,12 @@ export class ClientService {
   constructor(private http: HttpClient) { }
 
   getAllclient(): Observable<APIResponseModel> {
-    return this.http.get<APIResponseModel>(`${environment.API_URL}/ClientStrive/GetAllClients`);
+    return this.http.get<APIResponseModel>(`${environment.API_URL}GetAllClients`);
   }
   addUpdateclient(obj: Client): Observable<APIResponseModel> {
-    return this.http.post<APIResponseModel>(`${environment.API_URL}/ClientStrive/AddUpdateClient`, obj);
+    return this.http.post<APIResponseModel>(`${environment.API_URL}AddUpdateClient`, obj);
   }
   deleteclient(id: string): Observable<APIResponseModel> {
-    return this.http.get<APIResponseModel>(`${environment.API_URL}/ClientStrive/DeleteClientByClientId?clientId=${id}`);
+    return this.http.get<APIResponseModel>(`${environment.API_URL}DeleteClientByClientId?clientId=${id}`);
   }
 }
